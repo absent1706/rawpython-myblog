@@ -1,11 +1,4 @@
-import mywebpy
-
-from views import *
-
-app = mywebpy.App([
-    dict(regex=r'^/$', view=index),
-    dict(regex=r'^/posts/(?P<id>\d+)$', view=post_detail),
-])
+from myblog import app
 
 if __name__ == '__main__':
     from werkzeug.serving import run_simple
